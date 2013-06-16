@@ -37,9 +37,12 @@ def data_extractor(base_url):
                 print 'Net Profit Found'
         except AttributeError:
             pass
+    print years
     print total_income
     print net_profit
-    print years
+    print 'Ratios:'
+    for income, profit in zip(total_income, net_profit):
+        print profit/income
     #result = {}
     #for year, nums in zip(years.findAll('td'), income.findAll('td')):
     #    #print year.text, nums.text
